@@ -84,4 +84,10 @@ footer {
   padding: 2rem;
   background-color: #111;
   font-size: 0.9rem;
+  <div class="social-icons">
+  <a href="https://www.instagram.com/mr_yuca" target="_blank"><img src="icons/icon_1.png" alt="Instagram" width="32"></a>
+  <a href="#"><img src="icons/icon_2.png" alt="Facebook" width="32"></a>
+  <a href="#"><img src="icons/icon_3.png" alt="LINE" width="32"></a>
+  <a href="#"><img src="icons/icon_4.png" alt="Shopee" width="32"></a>
+</div>
 }
