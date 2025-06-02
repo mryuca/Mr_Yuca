@@ -236,6 +236,27 @@
       overlay.classList.toggle("show");
     }
   </script>
+  
+  <script>
+  function increaseQty() {
+    const input = document.getElementById('productQty');
+    input.value = parseInt(input.value) + 1;
+  }
+
+  function decreaseQty() {
+    const input = document.getElementById('productQty');
+    if (parseInt(input.value) > 1) {
+      input.value = parseInt(input.value) - 1;
+    }
+  }
+
+  function updateCartQty() {
+    const qty = document.getElementById('productQty').value;
+    const addBtn = document.querySelector('.snipcart-add-item');
+    addBtn.setAttribute('data-item-quantity', qty);
+  }
+</script>
+
 </body>
 </html>
 
