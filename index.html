@@ -239,16 +239,25 @@
 </body>
 </html>
 
-<button 
-  class="snipcart-add-item"
-  data-item-id="cassava-sand-2.5kg"
-  data-item-name="木薯叔天然木薯貓砂"
-  data-item-price="250"
-  data-item-url="/index.html"
-  data-item-description="天然無添加木薯貓砂，清爽不黏底，適合過敏貓"
->
-  加入購物車
-</button>
+<div class="product-cart">
+  <div class="quantity-selector">
+    <button onclick="decreaseQty()">-</button>
+    <input type="number" id="productQty" value="1" min="1" />
+    <button onclick="increaseQty()">+</button>
+  </div>
+
+  <button class="snipcart-add-item"
+    data-item-id="cassava-sand-2.5kg"
+    data-item-name="木薯叔天然木薯貓砂"
+    data-item-price="250"
+    data-item-url="index.html"
+    data-item-description="天然無添加木薯貓砂，清爽不黏底，適合過敏貓"
+    data-item-quantity="1"
+    onclick="updateCartQty()"
+  >
+    加入購物車
+  </button>
+</div>
 
 <div class="snipcart-summary">
   <a href="#" class="snipcart-checkout">
