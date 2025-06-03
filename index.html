@@ -276,3 +276,24 @@
   </script>
 </body>
 </html>
+
+<script>
+  function increaseQuantity() {
+    const input = document.getElementById("product-quantity");
+    input.value = parseInt(input.value) + 1;
+  }
+
+  function decreaseQuantity() {
+    const input = document.getElementById("product-quantity");
+    if (parseInt(input.value) > 1) {
+      input.value = parseInt(input.value) - 1;
+    }
+  }
+
+  function updateQuantity() {
+    const quantity = document.getElementById("product-quantity").value;
+    const button = document.querySelector(".snipcart-add-item");
+    button.setAttribute("data-item-quantity", quantity);
+  }
+</script>
+
