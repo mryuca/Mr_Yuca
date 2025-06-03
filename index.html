@@ -176,35 +176,36 @@
     <p>敬請期待品牌故事文字內容。</p>
   </section>
 
-  <section id="product">
-    <h2>產品介紹</h2>
-   <section id="product" class="product-section">
-  <div class="product-card">
-    <img src="image/product_sand.jpg" alt="木薯叔天然木薯貓砂" class="product-image" />
-    <div class="product-info">
-      <h2>木薯叔天然木薯貓砂</h2>
-      <p>天然無添加木薯貓砂，清爽不黏底，適合過敏貓</p>
+<section id="product">
+  <h2>產品介紹</h2>
 
-      <div class="quantity-container">
-        <button class="quantity-button" onclick="decreaseQuantity()">−</button>
-        <input id="product-quantity" type="number" value="1" min="1">
-        <button class="quantity-button" onclick="increaseQuantity()">＋</button>
-      </div>
-      
-      <button
-        class="snipcart-add-item custom-cart-button"
-        data-item-id="cassava-sand"
-        data-item-name="木薯叔天然木薯貓砂"
-        data-item-price="250"
-        data-item-url="index.html"
-        data-item-description="天然無添加木薯貓砂，清爽不黏底，適合過敏貓"
-        data-item-quantity="1"
-        onclick="updateCartQty()"
-      >
-        加入購物車
-      </button>
+  <div class="product">
+    <img src="image/product_sand.jpg" alt="木薯叔天然木薯貓砂" class="product-image" />
+
+    <h3>木薯叔天然木薯貓砂</h3>
+    <p>天然無添加木薯貓砂，清爽不黏底，適合過敏貓</p>
+
+    <div class="quantity-container">
+      <button class="quantity-button" onclick="decreaseQuantity()">−</button>
+      <input id="product-quantity" type="number" value="1" min="1">
+      <button class="quantity-button" onclick="increaseQuantity()">＋</button>
     </div>
-  </section>
+
+    <button
+      class="snipcart-add-item cart-button"
+      data-item-id="cassava-sand"
+      data-item-name="木薯叔天然木薯貓砂"
+      data-item-price="250"
+      data-item-url="index.html"
+      data-item-description="天然無添加木薯貓砂，清爽不黏底，適合過敏貓"
+      data-item-quantity="1"
+      onclick="updateQuantity()"
+    >
+      加入購物車
+    </button>
+  </div>
+</section>
+
 
   <section id="howto">
     <h2>使用方式</h2>
