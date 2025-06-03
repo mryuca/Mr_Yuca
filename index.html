@@ -162,6 +162,26 @@
     }
   </style>
 </head>
+  <script>
+  function decreaseQuantity() {
+    const input = document.getElementById("product-quantity");
+    let value = parseInt(input.value);
+    if (value > 1) input.value = value - 1;
+  }
+
+  function increaseQuantity() {
+    const input = document.getElementById("product-quantity");
+    let value = parseInt(input.value);
+    input.value = value + 1;
+  }
+
+  function updateQuantity() {
+    const quantity = document.getElementById("product-quantity").value;
+    const button = document.querySelector(".snipcart-add-item");
+    button.setAttribute("data-item-quantity", quantity);
+  }
+</script>
+
 <body>
   <header class="navbar">
     <img src="image/木薯叔-頭貼logo.png" alt="木薯叔 Logo" class="logo" />
