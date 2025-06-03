@@ -246,3 +246,19 @@ footer {
   background-color: #b8903f;
 }
 
+  .snipcart__font--secondary, .snipcart__font--bold {
+  font-family: inherit;
+}
+
+.snipcart__price--amount {
+  visibility: hidden;
+  position: relative;
+}
+
+.snipcart__price--amount::after {
+  content: attr(data-price) " 元";
+  visibility: visible;
+  position: absolute;
+  left: 0;
+}
+
