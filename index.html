@@ -297,3 +297,19 @@
   }
 </script>
 
+<script>
+  document.addEventListener('snipcart.ready', () => {
+    const updatePrices = () => {
+      document.querySelectorAll('.snipcart__price--amount').forEach(el => {
+        const priceText = el.textContent.trim().replace(/[^\d.]/g, '');
+        el.setAttribute('data-price', priceText);
+      });
+    };
+
+    updatePrices();
+    // 監聽變動：每次重新渲染 Snipcart 購物車都執行
+    document.addEventListener('snipcart.cart.ready', updatePrices);
+    document.addEventListener('snipcart.cart.closed', updatePrices);
+  });
+</script>
+
