@@ -260,21 +260,25 @@
 </body>
 </html>
 
-<div class="product-cart">
-  <div class="quantity-selector">
-    <button onclick="decreaseQty()">-</button>
-    <input type="number" id="productQty" value="1" min="1" />
-    <button onclick="increaseQty()">+</button>
+<div class="product">
+  <h2>木薯叔天然木薯貓砂</h2>
+  <p>天然無添加木薯貓砂，清爽不黏底，適合過敏貓</p>
+
+  <div class="quantity-container">
+    <button class="quantity-button" onclick="decreaseQuantity()">−</button>
+    <input id="product-quantity" type="number" value="1" min="1">
+    <button class="quantity-button" onclick="increaseQuantity()">＋</button>
   </div>
 
-  <button class="snipcart-add-item"
-    data-item-id="cassava-sand-2.5kg"
+  <button
+    class="snipcart-add-item custom-cart-button"
+    data-item-id="cassava-sand"
     data-item-name="木薯叔天然木薯貓砂"
     data-item-price="250"
     data-item-url="index.html"
     data-item-description="天然無添加木薯貓砂，清爽不黏底，適合過敏貓"
     data-item-quantity="1"
-    onclick="updateCartQty()"
+    onclick="updateQuantity()"
   >
     加入購物車
   </button>
