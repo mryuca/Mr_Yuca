@@ -278,6 +278,8 @@
   <div class="floating-cart-bar" id="floatingCartBar">
   <a href="#" class="snipcart-checkout">
     🛒 購物車：<span class="snipcart-items-count"></span> 件 - NT$<span class="snipcart-total-price"></span>
+    <span class="snipcart-items-count"></span>
+    <span class="snipcart-total-price"></span>
   </a>
 </div>
 
@@ -301,6 +303,26 @@
   });
 </script>
   
+  <script>
+  document.addEventListener('snipcart.ready', () => {
+    const cartCount = document.querySelector('.snipcart-items-count');
+    const cartTotal = document.querySelector('.snipcart-total-price');
+
+    Snipcart.store.subscribe(() => {
+      const state = Snipcart.store.getState();
+      const items = state.cart.items;
+      const total = state.cart.total;
+
+      // 計算總數量
+      const quantity = items.reduce((sum, item) => sum + item.quantity, 0);
+      cartCount.textContent = quantity;
+
+      // 顯示價格（NT$）
+      cartTotal.textContent = Math.round(total) + ' 元';
+    });
+  });
+</script>
+
 </body>
 </html>
 
@@ -358,5 +380,7 @@
     lastScrollY = currentScrollY;
   });
 </script>
+
+
 
 
