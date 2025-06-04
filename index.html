@@ -280,6 +280,24 @@
     🛒 購物車：<span class="snipcart-items-count"></span> 件 - NT$<span class="snipcart-total-price"></span>
   </a>
 </div>
+  <script>
+  let lastScrollY = window.scrollY;
+  const cartBar = document.getElementById('floatingCartBar');
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+      // 👇 往下滑 → 顯示浮動欄
+      cartBar.classList.add('show');
+    } else {
+      // 👆 往上滑 → 隱藏
+      cartBar.classList.remove('show');
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>
 </body>
 </html>
 
