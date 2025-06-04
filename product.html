@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>木薯叔 | 天然木薯貓砂</title>
+
+  <!-- Snipcart CSS -->
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      font-family: "微軟正黑體", sans-serif;
+      background: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .product-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background-color: #111;
+      padding: 2rem;
+      border-radius: 8px;
+    }
+
+    .product-image {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .product-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      color: #cba862;
+      margin-bottom: 1rem;
+    }
+
+    .product-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .product-options,
+    .quantity-selector {
+      margin-bottom: 1rem;
+    }
+
+    .quantity-selector input {
+      width: 50px;
+      text-align: center;
+    }
+
+    .quantity-button {
+      padding: 0.4rem 0.8rem;
+      background-color: #cba862;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .snipcart-add-item {
+      background-color: #cba862;
+      border: none;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .product-detail-section {
+      margin-top: 2rem;
+      background: #1a1a1a;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+
+    .product-detail-section h3 {
+      margin-top: 0;
+      color: #cba862;
+    }
+
+    @media (max-width: 600px) {
+      .product-container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product-container">
+    <img src="image/product_sand.jpg" alt="木薯叔天然木薯貓砂" class="product-image" />
+    <h1 class="product-title">【嚴選】天然木薯貓砂（2.35kg）</h1>
+    <div class="price">特價 NT$250</div>
+
+    <p class="product-description">
+      天然無添加木薯貓砂，清爽不黏底，適合過敏體質貓咪。可沖馬桶，凝結力佳。
+    </p>
+
+    <!-- 規格選擇 -->
+    <div class="product-options">
+      <label for="spec">選擇包裝：</label>
+      <select id="spec">
+        <option value="2.35kg">單包（2.35kg）</option>
+        <option value="2.35kg x2">兩包組（2.35kg x2）</option>
+      </select>
+    </div>
+
+    <!-- 數量選擇 -->
+    <div class="quantity-selector">
+      <button onclick="decreaseQuantity()" class="quantity-button">−</button>
+      <input type="number" id="quantity" value="1" min="1" />
+      <button onclick="increaseQuantity()" class="quantity-button">＋</button>
+    </div>
+
+    <!-- 加入購物車 -->
+    <button
+      class="snipcart-add-item"
+      data-item-id="cassava-litter"
+      data-item-name="木薯叔天然木薯貓砂"
+      data-item-price="250"
+      data-item-url="https://mryuca.github.io/Mr_Yuca/product.html"
+      data-item-description="天然無添加，適合過敏體質貓咪"
+      data-item-image="image/product_sand.jpg"
+      data-item-custom1-name="包裝"
+      data-item-custom1-options="單包（2.35kg）|兩包組（2.35kg x2）"
+      data-item-quantity="1"
+      onclick="updateQuantity()"
+    >
+      加入購物車
+    </button>
+
+    <!-- 商品說明區 -->
+    <div class="product-detail-section">
+      <h3>商品說明</h3>
+      <p>
+        木薯叔貓砂使用 85% 天然木薯澱粉製成，採用低敏無塵配方，適合全齡貓使用。可搭配自動貓砂機。
+      </p>
+      <ul>
+        <li>可沖馬桶（少量分次）</li>
+        <li>適合多貓家庭</li>
+        <li>自然分解、環境友善</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Snipcart JS -->
+  <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+  <div hidden id="snipcart" data-api-key="MDJhYTU3MzEtM2U3Ni00NmNiLTgzODUtYWEzNTI1MmFmYjVmNjM4ODQ0Njc2MTc2MzY4ODA5"></div>
+
+  <!-- 數量控制 JS -->
+  <script>
+    function increaseQuantity() {
+      const input = document.getElementById("quantity");
+      input.value = parseInt(input.value) + 1;
+      updateQuantity();
+    }
+
+    function decreaseQuantity() {
+      const input = document.getElementById("quantity");
+      if (parseInt(input.value) > 1) {
+        input.value = parseInt(input.value) - 1;
+      }
+      updateQuantity();
+    }
+
+    function updateQuantity() {
+      const qty = document.getElementById("quantity").value;
+      const spec = document.getElementById("spec").value;
+      const button = document.querySelector(".snipcart-add-item");
+
+      button.setAttribute("data-item-quantity", qty);
+      button.setAttribute("data-item-custom1-value", spec);
+    }
+  </script>
+</body>
+</html>
