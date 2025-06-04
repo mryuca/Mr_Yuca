@@ -285,21 +285,21 @@
 
   <!--浮動購物欄 JS 功能-->
   <script>
-  let lastScrollY = window.scrollY;
+ let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
   const cartBar = document.getElementById('floatingCartBar');
 
-  window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
+  if (currentScrollY > lastScrollY && currentScrollY > 100) {
+    cartBar.classList.add('show');
+  } else {
+    cartBar.classList.remove('show');
+  }
 
-    if (currentScrollY > lastScrollY) {
-      // 👇 往下滑 → 顯示浮動欄
-      cartBar.classList.add('show');
-    } else {
-      // 👆 往上滑 → 隱藏
-      cartBar.classList.remove('show');
-    }
+  lastScrollY = currentScrollY;
+});
 
-    lastScrollY = currentScrollY;
   });
 </script>
   
@@ -362,24 +362,6 @@
   });
 </script>
 
-<script>
-  let lastScrollY = window.scrollY;
-
-  window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-    const cartBar = document.getElementById('floatingCartBar');
-
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-      // 往下滑
-      cartBar.classList.add('show');
-    } else {
-      // 往上滑或頂部
-      cartBar.classList.remove('show');
-    }
-
-    lastScrollY = currentScrollY;
-  });
-</script>
 
 
 
