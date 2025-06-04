@@ -1,169 +1,186 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>木薯叔商品頁</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>木薯叔天然木薯貓砂</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    :root {
-      --main-color: #cba862;
-      --bg-color: #000;
-      --text-color: #fff;
-      --card-bg: #111;
-      --border-radius: 1rem;
-    }
-
     body {
       margin: 0;
-      font-family: "Helvetica Neue", "微軟正黑體", sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-    }
-
-    .container {
-      max-width: 768px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-
-    .product-card {
-      background-color: var(--card-bg);
-      border-radius: var(--border-radius);
-      padding: 1.5rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .product-img {
-      width: 100%;
-      border-radius: var(--border-radius);
-    }
-
-    .product-title {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-
-    .product-price {
-      font-size: 1.2rem;
-      color: var(--main-color);
-      margin: 0.5rem 0;
-    }
-
-    .product-description {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-
-    .product-actions {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .quantity-btn {
-      padding: 0.5rem 1rem;
-      font-size: 1.2rem;
-      border: none;
-      background-color: var(--main-color);
-      color: white;
-      border-radius: 0.5rem;
-      cursor: pointer;
-    }
-
-    .product-qty {
-      width: 50px;
-      text-align: center;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 0.5rem;
-      padding: 0.25rem;
-    }
-
-    .buy-btn {
-      background-color: var(--main-color);
-      color: white;
-      padding: 0.75rem;
-      width: 100%;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: var(--border-radius);
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .select-wrapper {
-      margin-bottom: 1rem;
-    }
-
-    .product-select {
-      width: 100%;
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      background-color: #222;
+      font-family: "微軟正黑體", sans-serif;
+      background: #000;
       color: #fff;
     }
-
-    @media (min-width: 768px) {
-      .product-layout {
-        display: flex;
-        gap: 2rem;
-      }
-
-      .product-img {
-        width: 50%;
-      }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
+      padding: 1rem;
+      position: relative;
+      z-index: 10;
+    }
+    .logo {
+      height: 40px;
+    }
+    .menu-icon {
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+      background: none;
+      border: none;
+    }
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 70%;
+      height: 100%;
+      background-color: #111;
+      color: white;
+      transition: left 0.3s ease;
+      padding: 2rem 1.5rem;
+      z-index: 20;
+    }
+    .mobile-menu.open {
+      left: 0;
+    }
+    .mobile-menu ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 2rem;
+    }
+    .mobile-menu ul li {
+      margin: 1.2rem 0;
+    }
+    .mobile-menu ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 15;
+      display: none;
+    }
+    .overlay.show {
+      display: block;
+    }
+    .hero {
+      text-align: center;
+      padding: 6rem 1rem;
+    }
+    .cta-button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #cba862;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    .product {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .quantity-container {
+      margin: 1rem 0;
+    }
+    .quantity-button {
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      background-color: #cba862;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      margin: 0 0.5rem;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #111;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    .social-icons a img {
+      margin: 0 0.5rem;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="product-card">
-      <div class="product-layout">
-        <img src="https://via.placeholder.com/500x500.png?text=商品圖" alt="商品圖" class="product-img">
-        <div>
-          <div class="product-title">木薯叔天然木薯貓砂</div>
-          <div class="product-price">NT$ 250 元</div>
-          <div class="product-description">
-            天然無添加、清爽不黏底，適合過敏貓使用。
-          </div>
+  <header class="navbar">
+    <img src="image/木薯叔-頭貼logo.png" alt="木薯叔 Logo" class="logo" />
+    <button class="menu-icon" onclick="toggleMenu()">☰</button>
+  </header>
 
-          <div class="select-wrapper">
-            <select id="product-variant" class="product-select">
-              <option value="700g">700g</option>
-              <option value="3kg">3kg</option>
-              <option value="6kg">6kg</option>
-            </select>
-          </div>
-
-          <div class="product-actions">
-            <button class="quantity-btn" onclick="decreaseQty()">−</button>
-            <input type="number" id="product-qty" class="product-qty" value="1" min="1">
-            <button class="quantity-btn" onclick="increaseQty()">＋</button>
-          </div>
-
-          <a href="https://www.zeczec.com/projects" class="buy-btn" target="_blank">立即購買（前往嘖嘖）</a>
-        </div>
-      </div>
-    </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about">品牌故事</a></li>
+      <li><a href="#product">產品介紹</a></li>
+      <li><a href="#howto">使用方式</a></li>
+      <li><a href="#faq">常見問題</a></li>
+      <li><a href="#contact">聯絡我們</a></li>
+    </ul>
   </div>
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <main class="hero">
+    <h1>木薯叔天然木薯貓砂</h1>
+    <p>給貓咪最安心的選擇，來自大地的天然呵護</p>
+    <a href="#product" class="cta-button">立即選購</a>
+  </main>
+
+  <section id="product">
+    <h2>產品介紹</h2>
+    <div class="product">
+      <img src="image/product_sand.jpg" alt="木薯叔天然木薯貓砂" class="product-image" />
+      <h3>木薯叔天然木薯貓砂</h3>
+      <p>天然無添加木薯貓砂，清爽不黏底，適合過敏貓</p>
+      <div class="quantity-container">
+        <button class="quantity-button" onclick="decreaseQuantity()">−</button>
+        <input id="product-quantity" type="number" value="1" min="1">
+        <button class="quantity-button" onclick="increaseQuantity()">＋</button>
+      </div>
+      <a href="https://www.zeczec.com/" target="_blank" class="cta-button">立即購買</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 木薯叔天然木薯貓砂 | 本網站由品牌熱血建立</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/mr_yuca" target="_blank"><img src="icons/icon_1.png" alt="Instagram" width="32" /></a>
+      <a href="#"><img src="icons/icon_2.png" alt="Facebook" width="32" /></a>
+      <a href="#"><img src="icons/icon_3.png" alt="LINE" width="32" /></a>
+      <a href="#"><img src="icons/icon_4.png" alt="Shopee" width="32" /></a>
+    </div>
+  </footer>
 
   <script>
-    function increaseQty() {
-      const input = document.getElementById("product-qty");
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      const overlay = document.getElementById("overlay");
+      menu.classList.toggle("open");
+      overlay.classList.toggle("show");
+    }
+
+    function increaseQuantity() {
+      const input = document.getElementById("product-quantity");
       input.value = parseInt(input.value) + 1;
     }
 
-    function decreaseQty() {
-      const input = document.getElementById("product-qty");
-      if (parseInt(input.value) > 1) input.value = parseInt(input.value) - 1;
+    function decreaseQuantity() {
+      const input = document.getElementById("product-quantity");
+      if (parseInt(input.value) > 1) {
+        input.value = parseInt(input.value) - 1;
+      }
     }
   </script>
 </body>
