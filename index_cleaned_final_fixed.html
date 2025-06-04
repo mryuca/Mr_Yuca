@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>木薯叔天然木薯貓砂</title>
+<!-- Snipcart CSS -->
+<link href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<style>
+    body {
+      margin: 0;
+      font-family: "微軟正黑體", sans-serif;
+      background: #000;
+      color: #fff;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
+      padding: 1rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .menu-icon {
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+      background: none;
+      border: none;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 70%;
+      height: 100%;
+      background-color: #111;
+      color: white;
+      transition: left 0.3s ease;
+      padding: 2rem 1.5rem;
+      z-index: 20;
+    }
+
+    .mobile-menu.open {
+      left: 0;
+    }
+
+    .mobile-menu ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 2rem;
+    }
+
+    .mobile-menu ul li {
+      margin: 1.2rem 0;
+    }
+
+    .mobile-menu ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 15;
+      display: none;
+    }
+
+    .overlay.show {
+      display: block;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 6rem 1rem;
+    }
+
+    .cta-button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #cba862;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    .product {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .quantity-container {
+      margin: 1rem 0;
+    }
+
+    .quantity-button {
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      background-color: #cba862;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      margin: 0 0.5rem;
+      cursor: pointer;
+    }
+
+    .custom-cart-button {
+      background-color: #cba862;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #111;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .social-icons a img {
+      margin: 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+<header class="navbar">
+<img alt="木薯叔 Logo" class="logo" src="image/木薯叔-頭貼logo.png"/>
+<button class="menu-icon" onclick="toggleMenu()">☰</button>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+<ul>
+<li><a href="#about">品牌故事</a></li>
+<li><a href="#product">產品介紹</a></li>
+<li><a href="#howto">使用方式</a></li>
+<li><a href="#faq">常見問題</a></li>
+<li><a href="#contact">聯絡我們</a></li>
+<li><a href="#cart">購物車</a></li>
+</ul>
+</div>
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+<main class="hero">
+<h1>木薯叔天然木薯貓砂</h1>
+<p>給貓咪最安心的選擇，來自大地的天然呵護</p>
+<a class="cta-button" href="#product">立即選購</a>
+</main>
+<section id="about">
+<h2>品牌故事</h2>
+<p>敬請期待品牌故事文字內容。</p>
+</section>
+<section id="product">
+<h2>產品介紹</h2>
+<div class="product">
+<img alt="木薯叔天然木薯貓砂" class="product-image" src="image/product_sand.jpg"/>
+<h3>木薯叔天然木薯貓砂</h3>
+<p>天然無添加木薯貓砂，清爽不黏底，適合過敏貓</p>
+<div class="quantity-container">
+<button class="quantity-button" onclick="decreaseQuantity()">−</button>
+<input id="product-quantity" min="1" type="number" value="1"/>
+<button class="quantity-button" onclick="increaseQuantity()">＋</button>
+</div>
+<button class="snipcart-add-item cart-button" data-item-description="天然無添加木薯貓砂，清爽不黏底，適合過敏貓" data-item-id="cassava-sand" data-item-name="木薯叔天然木薯貓砂" data-item-price="250" data-item-quantity="1" data-item-url="index.html" onclick="updateQuantity()">
+      加入購物車
+    </button>
+</div>
+</section>
+<section id="howto">
+<h2>使用方式</h2>
+<p>敬請期待...</p>
+</section>
+<section id="faq">
+<h2>常見問題</h2>
+<p>這裡將放置常見問題與解答。</p>
+</section>
+<section id="contact">
+<h2>聯絡我們</h2>
+<p>Email：<a href="mailto:mryuca1110@gmail.com">mryuca1110@gmail.com</a></p>
+<p>Instagram：<a href="https://www.instagram.com/mr_yuca" target="_blank">@mr_yuca</a></p>
+<p>電話：將於日後更新</p>
+<p>LINE / Facebook / 統編：尚未提供</p>
+</section>
+<footer>
+<p>© 2025 木薯叔天然木薯貓砂 | 本網站由品牌熱血建立</p>
+<div class="social-icons">
+<a href="https://www.instagram.com/mr_yuca" target="_blank"><img alt="Instagram" src="icons/icon_1.png" width="32"/></a>
+<a href="#"><img alt="Facebook" src="icons/icon_2.png" width="32"/></a>
+<a href="#"><img alt="LINE" src="icons/icon_3.png" width="32"/></a>
+<a href="#"><img alt="Shopee" src="icons/icon_4.png" width="32"/></a>
+</div>
+</footer>
+<div class="snipcart-summary">
+<a class="snipcart-checkout" href="#">
+<span class="snipcart-items-count"></span> 件商品 - <span class="snipcart-total-price"></span>
+</a>
+</div>
+<!-- Snipcart Script -->
+
+<!-- Snipcart Container -->
+<div data-api-key="MDJhYTU3MzEtM2U3Ni00NmNiLTgzODUtYWEzNTI1MmFmYjVmNjM4ODQ0Njc2MTc2MzY4ODA5" hidden="" id="snipcart"></div>
+<!-- 自訂功能 -->
+
+<!--浮動購物欄位 HTML-->
+<div class="floating-cart-bar" id="floatingCartBar">
+<a class="snipcart-checkout" href="#">
+    🛒 購物車：<span class="snipcart-items-count"></span> 件 - NT$<span class="snipcart-total-price"></span>
+<span class="snipcart-items-count"></span>
+<span class="snipcart-total-price"></span>
+</a>
+</div>
+<!--浮動購物欄 JS 功能-->
+
+
+</body>
+</html>
+<script>
+  function increaseQuantity() {
+    const input = document.getElementById("product-quantity");
+    input.value = parseInt(input.value) + 1;
+  }
+
+  function decreaseQuantity() {
+    const input = document.getElementById("product-quantity");
+    if (parseInt(input.value) > 1) {
+      input.value = parseInt(input.value) - 1;
+    }
+  }
+
+  function updateQuantity() {
+    const quantity = document.getElementById("product-quantity").value;
+    const button = document.querySelector(".snipcart-add-item");
+    button.setAttribute("data-item-quantity", quantity);
+  }
+</script>
+<script>
+  document.addEventListener('snipcart.ready', () => {
+    const updatePrices = () => {
+      document.querySelectorAll('.snipcart__price--amount').forEach(el => {
+        const priceText = el.textContent.trim().replace(/[^\d.]/g, '');
+        el.setAttribute('data-price', priceText);
+      });
+    };
+
+    updatePrices();
+    // 監聽變動：每次重新渲染 Snipcart 購物車都執行
+    document.addEventListener('snipcart.cart.ready', updatePrices);
+    document.addEventListener('snipcart.cart.closed', updatePrices);
+  });
+</script>
+<script>
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    const cartBar = document.getElementById('floatingCartBar');
+
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // 往下滑
+      cartBar.classList.add('show');
+    } else {
+      // 往上滑或頂部
+      cartBar.classList.remove('show');
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>
