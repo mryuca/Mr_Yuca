@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>木薯叔購物車測試</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: "微軟正黑體", sans-serif;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .product-image {
+      max-width: 300px;
+      margin-bottom: 1rem;
+    }
+    .snipcart-add-item {
+      background: #cba862;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>木薯叔｜天然木薯貓砂</h1>
+  <img src="image/product_sand.jpg" alt="天然木薯貓砂" class="product-image" />
+  <p>天然無添加，適合過敏貓</p>
+  <p>價格：NT$250</p>
+
+  <button
+    class="snipcart-add-item"
+    data-item-id="cassava-sand-test"
+    data-item-name="木薯叔｜天然木薯貓砂"
+    data-item-price="250"
+    data-item-url="https://mryuca.github.io/Mr_Yuca/test.html"
+    data-item-description="天然無添加，適合過敏貓"
+  >
+    加入購物車
+  </button>
+
+  <!-- Snipcart -->
+  <div hidden id="snipcart" data-api-key="MDJhYTU3MzEtM2U3Ni00NmNiLTgzODUtYWEzNTI1MmFmYjVmNjM4ODQ0Njc2MTc2MzY4ODA5"></div>
+  <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+
+</body>
+</html>
