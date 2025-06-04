@@ -262,12 +262,12 @@ footer {
   left: 0;
 }
 
-  .floating-cart-bar {
+ .floating-cart-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #1b1b1b;
+  background-color: #111;
   color: #fff;
   text-align: center;
   padding: 1rem;
