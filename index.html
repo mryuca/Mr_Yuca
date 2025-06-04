@@ -274,12 +274,14 @@
       addBtn.setAttribute('data-item-quantity', qty);
     }
   </script>
-  
+  <!--浮動購物欄位 HTML-->
   <div class="floating-cart-bar" id="floatingCartBar">
   <a href="#" class="snipcart-checkout">
     🛒 購物車：<span class="snipcart-items-count"></span> 件 - NT$<span class="snipcart-total-price"></span>
   </a>
 </div>
+
+  <!--浮動購物欄 JS 功能-->
   <script>
   let lastScrollY = window.scrollY;
   const cartBar = document.getElementById('floatingCartBar');
@@ -298,6 +300,7 @@
     lastScrollY = currentScrollY;
   });
 </script>
+  
 </body>
 </html>
 
