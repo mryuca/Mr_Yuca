@@ -78,16 +78,3 @@ body {
   line-height: 1.7;
   color: #dddddd;
 }
-
-/* 響應式 Logo 控制 */
-.logo {
-  max-width: 160px;
-  height: auto;
-  object-fit: contain;
-}
-
-@media (max-width: 768px) {
-  .logo {
-    max-width: 120px;
-  }
-}
