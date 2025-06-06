@@ -1,0 +1,161 @@
+# HTML template for product introduction page for 木薯叔天然木薯貓砂
+html_content = """
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>木薯叔天然木薯貓砂｜產品介紹</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Noto Sans TC", sans-serif;
+            background-color: #0e0e0e;
+            color: #f1f1f1;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1f1f1f;
+            padding: 2rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            color: #ffdd93;
+        }
+        section {
+            padding: 2rem;
+            border-bottom: 1px solid #333;
+        }
+        h2 {
+            color: #a5e887;
+        }
+        .benefits, .advantages, .no-fragrance {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .benefit-box {
+            flex: 1 1 250px;
+            background-color: #222;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #222;
+            color: #fff;
+        }
+        th, td {
+            padding: 0.8rem;
+            border: 1px solid #444;
+            text-align: center;
+        }
+        th {
+            background-color: #333;
+        }
+        .highlight {
+            color: #ffdd93;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>木薯叔天然木薯貓砂</h1>
+        <p>全新砂種革命｜天然｜高凝結｜極低粉塵｜不含香精</p>
+    </header>
+
+    <section>
+        <h2>五大必買優點</h2>
+        <div class="benefits">
+            <div class="benefit-box">🌿 <strong>高效凝結，不黏底</strong><br>瞬間包覆尿液，鏟起不費力。</div>
+            <div class="benefit-box">🍠 <strong>天然成分，安心舔舐</strong><br>純植物原料，無毒無害。</div>
+            <div class="benefit-box">🌬️ <strong>零粉塵，極佳適腳性</strong><br>不飛塵不刺激，貓咪無痛轉換。</div>
+            <div class="benefit-box">🌸 <strong>天然除臭，不靠香精</strong><br>吸收封鎖異味不造作。</div>
+            <div class="benefit-box">💎 <strong>高純度木薯粉製成</strong><br>不混豆腐或礦砂，成分單純。</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>木薯砂是什麼？為什麼選它？</h2>
+        <p>木薯砂是由高純度食用級木薯澱粉壓製而成，具有強效吸水與凝結能力，可分解、可堆肥，為當代最環保的貓砂之一。</p>
+        <ul>
+            <li>✔ 可吸收7倍以上重量尿液</li>
+            <li>✔ 3秒內瞬凝結，不黏底</li>
+            <li>✔ 可直接少量沖馬桶</li>
+            <li>✔ 天然成分無香料、低敏配方</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>與其他砂種比較</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>項目</th>
+                    <th>木薯叔</th>
+                    <th>豆腐砂</th>
+                    <th>礦砂</th>
+                    <th>混合砂</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>凝結力</td>
+                    <td class="highlight">⭐⭐⭐⭐</td>
+                    <td>⭐⭐</td>
+                    <td>⭐⭐⭐</td>
+                    <td>⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td>粉塵</td>
+                    <td class="highlight">極低</td>
+                    <td>中</td>
+                    <td>高</td>
+                    <td>中</td>
+                </tr>
+                <tr>
+                    <td>除臭力</td>
+                    <td class="highlight">⭐⭐⭐⭐</td>
+                    <td>⭐⭐</td>
+                    <td>⭐⭐</td>
+                    <td>⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td>適腳性</td>
+                    <td class="highlight">非常舒適</td>
+                    <td>普通</td>
+                    <td>較硬</td>
+                    <td>普通</td>
+                </tr>
+                <tr>
+                    <td>成分純度</td>
+                    <td class="highlight">高純度木薯</td>
+                    <td>豆渣＋黏合劑</td>
+                    <td>礦物粉</td>
+                    <td>混合</td>
+                </tr>
+                <tr>
+                    <td>香精添加</td>
+                    <td class="highlight">❌ 無</td>
+                    <td>常見</td>
+                    <td>常見</td>
+                    <td>視品牌</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>天然無香精｜貓咪聞得見的差異</h2>
+        <p>你知道嗎？貓咪的嗅覺是人類的 <strong class="highlight">14 倍</strong>。太多品牌添加香精只為遮味，卻忽略了貓咪的感受。</p>
+        <p>木薯叔堅持 <strong class="highlight">零香精添加</strong>，不用香氣掩蓋氣味，用天然吸附力守護毛孩的嗅覺健康。</p>
+    </section>
+</body>
+</html>
+"""
+
+# Display HTML preview
+display(HTML(html_content))
