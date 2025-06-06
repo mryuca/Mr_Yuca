@@ -79,12 +79,18 @@ body {
   color: #dddddd;
 }
 
-.faq-image-header picture,
-.faq-image-header img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 2rem;
+.faq-image-header {
+  margin: 0;
+  padding: 0;
 }
 
+.faq-image-header picture,
+.faq-image-header img {
+  width: 100vw;        /* 寬度強制跟視窗一樣寬 */
+  max-width: none;     /* 移除任何最大寬度限制 */
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
 
