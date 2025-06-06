@@ -81,10 +81,9 @@ body {
 
 .faq-image-header img {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px; /* 可微調為 1100px 或 1200px，看圖片內容 */
   height: auto;
   display: block;
   margin: 0 auto 2rem;
-}
-
+  padding: 0 1rem;
 
