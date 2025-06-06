@@ -78,3 +78,13 @@ body {
   line-height: 1.7;
   color: #dddddd;
 }
+
+faq封面大小
+.faq-image-header img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: 0 auto 2rem;
+}
+
